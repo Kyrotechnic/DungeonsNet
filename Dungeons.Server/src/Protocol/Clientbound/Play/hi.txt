@@ -1,0 +1,19 @@
+namespace Dungeons.Server.Protocol.Clientbound.Play;
+
+public class _ : IClientPacket
+{
+    public _()
+    {
+
+    }
+    public int GetPacketId() => _;
+
+    public IBuffer Write()
+    {
+        IBuffer buffer = IBuffer.Create();
+
+        
+
+        return buffer;
+    }
+}
