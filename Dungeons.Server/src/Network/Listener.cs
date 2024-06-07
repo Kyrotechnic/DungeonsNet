@@ -13,23 +13,25 @@ public class Listener : ServerInstance
     {
         int port = server.ServerData.port;
 
+        Console.WriteLine("port is " + port);
+
         listener = new(IPAddress.Any, port);
     }
 
     public void Start()
     {
-        listener.Start();
-
         server.Logger.LogDebug("Started listener. Starting new thread");
 
-        new Thread(async () => {
+        new Thread(() => {
+            listener.Start();
+
             while (true)
             {
-                TcpClient client = await listener.AcceptTcpClientAsync();
-                
-                server.Logger.LogDebug("Connection received!");
-                
-                server.ConnectionManager.AddUser(new DungeonsUser(client));
+                TcpClient client = listener.AcceptTcpClient();
+
+                server.Logger.LogDebug("Found client finally holy hsit wht f");
+
+                server.ConnectionManager.AddUser(new(client));
             }
         }).Start();
     }

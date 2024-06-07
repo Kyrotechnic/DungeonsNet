@@ -1,2 +1,1 @@
-name=5
-type="int"
+server.port=25566

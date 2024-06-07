@@ -19,13 +19,13 @@ public class DungeonsServer
         
         Config = new(configPath);
         Logger = new(Config.Get("logger.name", "server"), true);
-        Listener = new();
         
         int port = Config.Get("server.port", 25565);
 
         ServerData = new(port, true);
         ConnectionManager = new();
-
+        Listener = new();
+        
         Listener.Start();
         Logger.LogDebug("Started listener on port " + ServerData.port + ". Waiting for connections.");
 
