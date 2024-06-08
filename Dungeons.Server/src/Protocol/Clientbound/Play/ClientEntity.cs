@@ -4,7 +4,7 @@ public class ClientEntity : IClientPacket
 {
     public int EntityId;
     public ClientEntity(int EntityId)
-    {
+    {   
         this.EntityId = EntityId;
     }
     public int GetPacketId() => 0x14;

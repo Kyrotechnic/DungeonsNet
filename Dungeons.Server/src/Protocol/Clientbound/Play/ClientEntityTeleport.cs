@@ -1,8 +1,5 @@
-using System.Runtime.CompilerServices;
-using Dungeons.Server.Api;
-
 namespace Dungeons.Server.Protocol.Clientbound.Play;
-
+using Dungeons.Server.Api;
 public class ClientEntityTeleport : IClientPacket
 {
     public int EntityId;

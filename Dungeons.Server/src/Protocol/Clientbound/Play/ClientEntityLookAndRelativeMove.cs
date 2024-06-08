@@ -1,7 +1,5 @@
-using Dungeons.Server.Api;
-
 namespace Dungeons.Server.Protocol.Clientbound.Play;
-
+using Dungeons.Server.Api;
 public class ClientEntityLookAndRelativeMove : IClientPacket
 {
     public int EntityId;
@@ -19,7 +17,7 @@ public class ClientEntityLookAndRelativeMove : IClientPacket
         this.DeltaZ = DeltaZ;
         this.Yaw = Yaw;
         this.Pitch = Pitch;
-        this.OnGround = OnGround;
+        this.OnGround = OnGround;  
     }
     public int GetPacketId() => 0x17;
 

@@ -1,6 +1,5 @@
-using Dungeons.Server.Api;
-
 namespace Dungeons.Server.Protocol.Clientbound.Play;
+using Dungeons.Server.Api;
 
 public class ClientEntityLook : IClientPacket
 {
@@ -9,7 +8,7 @@ public class ClientEntityLook : IClientPacket
     public Angle Pitch;
     public bool OnGround;
     public ClientEntityLook(int EntityId, Angle Yaw, Angle Pitch, bool OnGround)
-    {
+    {   
         this.EntityId = EntityId;
         this.Yaw = Yaw;
         this.Pitch = Pitch;

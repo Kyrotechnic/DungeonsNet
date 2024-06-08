@@ -7,13 +7,13 @@ public class EntityRelativeMove : IClientPacket
     public sbyte DeltaY;
     public sbyte DeltaZ;
     public bool OnGround;
-    public EntityRelativeMove(int EntityId, sbyte DeltaX, sbyte DeltaY, sbyte DeltaZ, bool OnGround) 
+    public EntityRelativeMove(int EntityId, sbyte DeltaX, sbyte DeltaY, sbyte DeltaZ, bool OnGround)
     {
         this.EntityId = EntityId;
         this.DeltaX = DeltaX;
         this.DeltaY = DeltaY;
         this.DeltaZ = DeltaZ;
-        this.OnGround = OnGround;
+        this.OnGround = OnGround;   
     }
     public int GetPacketId() => 0x15;
 
@@ -26,7 +26,7 @@ public class EntityRelativeMove : IClientPacket
         buffer.WriteSByte(DeltaY);
         buffer.WriteSByte(DeltaZ);
         buffer.WriteBool(OnGround);
-        
+
         return buffer;
     }
 }

@@ -28,8 +28,9 @@ public class ClientEntityProperties : IClientPacket
 
             for (int j = 0; j < current.Modifiers.Length; j++) {
                 AttributeModifier currentModifier = current.Modifiers[i];
-                buffer.WriteString(currentModifier.Key);
-                buffer.WriteString(currentModifier.Value);
+                buffer.WriteGuid(currentModifier.UUID);
+                buffer.WriteDouble(currentModifier.Amount);
+                buffer.WriteSByte(currentModifier.Operation);
             }
         }
 

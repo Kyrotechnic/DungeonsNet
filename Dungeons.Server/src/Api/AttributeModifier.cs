@@ -2,12 +2,14 @@ namespace Dungeons.Server.Api;
 
 public struct AttributeModifier 
 {
-    public string Key {get; private set;}
-    public string Value {get; private set;}
+    public Guid UUID {get; private set;}
+    public double Amount {get; private set;}
+    public sbyte Operation {get; private set;}
 
-    public AttributeModifier(string Key, string Value)
+    public AttributeModifier(Guid UUID, double Amount, sbyte Operation)
     {
-        this.Key = Key;
-        this.Value = Value;
+        this.UUID = UUID;
+        this.Amount = Amount;
+        this.Operation = Operation;
     }
 }
