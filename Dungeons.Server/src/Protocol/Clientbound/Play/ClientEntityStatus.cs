@@ -4,7 +4,7 @@ public class ClientEntityStatus : IClientPacket
 {
     public int EntityId;
     public sbyte EntityStatus;
-    public ClientEntityStatus(int EntityId, sbyte EntityStatus)
+    public ClientEntityStatus(int EntityId, sbyte EntityStatus) 
     {
         this.EntityId = EntityId;
         this.EntityStatus = EntityStatus;
