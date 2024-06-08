@@ -18,7 +18,7 @@ public class ClientUpdateHealth : IClientPacket
         IBuffer buffer = IBuffer.Create();
 
         buffer.WriteFloat(Health);
-        buffer.WriteInt(Food);
+        buffer.WriteVarInt(Food);
         buffer.WriteFloat(FoodSaturation);
 
         return buffer;

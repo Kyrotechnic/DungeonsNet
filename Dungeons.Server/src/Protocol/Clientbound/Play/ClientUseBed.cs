@@ -15,7 +15,7 @@ public class ClientUseBed : IClientPacket
     {
         IBuffer buffer = IBuffer.Create();
 
-        buffer.WriteInt(EntityId);
+        buffer.WriteVarInt(EntityId);
         buffer.WritePosition(Location);
 
         return buffer;
