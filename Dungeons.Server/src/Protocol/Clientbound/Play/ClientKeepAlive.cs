@@ -3,9 +3,9 @@ namespace Dungeons.Server.Protocol.Clientbound.Play;
 public class ClientKeepAlive : IClientPacket
 {
     public int KeepAliveId;
-    public ClientKeepAlive(int keepAliveId)
+    public ClientKeepAlive(int KeepAliveId)
     {
-        this.KeepAliveId = keepAliveId;
+        this.KeepAliveId = KeepAliveId;
     }
     public int GetPacketId() => 0x00;
 
