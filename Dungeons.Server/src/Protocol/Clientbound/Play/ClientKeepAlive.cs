@@ -15,7 +15,6 @@ public class ClientKeepAlive : IClientPacket
 
         buffer.WriteVarInt(KeepAliveId);
     
-
         return buffer;
     }
 }
