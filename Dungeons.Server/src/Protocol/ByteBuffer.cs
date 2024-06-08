@@ -1,5 +1,6 @@
 using System.Net;
 using System.Text;
+using Dungeons.Server.Api;
 using Dungeons.Server.Location;
 
 namespace Dungeons.Server.Protocol;
@@ -292,6 +293,16 @@ public class ByteBuffer : IBuffer
     public Guid ReadUuid()
     {
         return new Guid(Read(16));
+    }
+
+    public Angle ReadAngle() 
+    {
+        return new Angle(ReadByte());
+    }
+
+    public void WriteAngle(Angle angle)
+    {
+        WriteByte(angle.Value);
     }
 
     public byte[] GetBytes()

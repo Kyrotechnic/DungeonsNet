@@ -1,6 +1,6 @@
 namespace Dungeons.Server.Entity;
 
-public class EntityPlayer : IEntityLiving
+public interface IEntityLiving : IEntity
 {
     
 }

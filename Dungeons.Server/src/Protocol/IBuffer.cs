@@ -1,4 +1,5 @@
 using Dungeons.Server.Location;
+using Dungeons.Server.Api;
 
 namespace Dungeons.Server.Protocol;
 
@@ -28,7 +29,7 @@ public interface IBuffer
     public void WriteBool(bool value);
     public void WritePosition(Position value);
     public void WriteGuid(Guid value);
-    //TODO implement metadata
+    public void WriteAngle(Angle angle);
 
     //read
     public byte[] Read(int count);
@@ -48,6 +49,7 @@ public interface IBuffer
     public bool ReadBool();
     public Position ReadPosition();
     public Guid ReadUuid();
+    public Angle ReadAngle();
 
     //
     public void Set(byte[] bytes);
