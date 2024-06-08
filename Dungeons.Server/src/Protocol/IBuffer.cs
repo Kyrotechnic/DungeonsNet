@@ -28,6 +28,7 @@ public interface IBuffer
     public void WriteBool(bool value);
     public void WritePosition(Position value);
     public void WriteGuid(Guid value);
+    //TODO implement metadata
 
     //read
     public byte[] Read(int count);

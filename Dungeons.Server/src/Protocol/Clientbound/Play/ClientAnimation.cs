@@ -1,24 +1,22 @@
 namespace Dungeons.Server.Protocol.Clientbound.Play;
 
-public class ClientEntityEquipment : IClientPacket
+public class ClientAnimation : IClientPacket
 {
     public int EntityId;
-    public short Slot;
-    //TODO: 
-    public ClientEntityEquipment(int EntityId, short Slot)
+    public byte Animation;
+    public ClientAnimation(int EntityId, byte Animation)
     {
         this.EntityId = EntityId;
-        this.Slot = Slot;
+        this.Animation = Animation;
     }
-    public int GetPacketId() => 0x04;
+    public int GetPacketId() => 0x0B;
 
     public IBuffer Write()
     {
         IBuffer buffer = IBuffer.Create();
 
         buffer.WriteVarInt(EntityId);
-        buffer.WriteShort(Slot);
-        
+        buffer.WriteByte(Animation);
 
         return buffer;
     }

@@ -6,7 +6,8 @@ public class ClientUseBed : IClientPacket
     public Position Location;
     public ClientUseBed(int EntityId, Position Location)
     {
-
+        this.EntityId = EntityId;
+        this.Location = Location;
     }
     public int GetPacketId() => 0x0A;
 
