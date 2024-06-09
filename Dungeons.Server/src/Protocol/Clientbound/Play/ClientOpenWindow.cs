@@ -4,6 +4,7 @@ public class ClientOpenWindow : IClientPacket
 {
     public byte WindowId;
     public string WindowType;
+    //TODO: Fix it add Chat and figure it out
     public ClientOpenWindow()
     {
 
