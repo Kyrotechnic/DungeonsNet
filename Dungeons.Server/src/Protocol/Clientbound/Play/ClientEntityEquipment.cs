@@ -4,7 +4,7 @@ public class ClientEntityEquipment : IClientPacket
 {
     public int EntityId;
     public short Slot;
-    //TODO: 
+    //TODO: SLOT
     public ClientEntityEquipment(int EntityId, short Slot)
     {
         this.EntityId = EntityId;
